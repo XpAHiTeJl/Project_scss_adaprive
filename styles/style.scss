@@ -1,6 +1,5 @@
 @import "./mixins.scss";
 @import "./variables.scss";
-@import "./media.scss";
 
 * {
   padding: 0;
@@ -36,7 +35,7 @@ li {
   }
   .navigation {
     @include d-flex(space-around, center);
-    width: 300px;
+    width: 400px;
     & a {
       color: black;
       width: 25px;
@@ -101,10 +100,14 @@ li {
   }
 }
 .footer {
-  @include d-flex(space-around, center);
+  @include d-flex(center, center);
+  text-align: center;
   & p {
+    width: 1000px;
     margin: $margin-m;
     color: rgb(4, 240, 248);
     font-weight: bold;
   }
 }
+
+@import "./media.scss";
