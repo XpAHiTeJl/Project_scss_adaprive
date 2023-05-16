@@ -5,17 +5,17 @@
   .header-container {
     @include d-flex(center, center, column);
     margin-bottom: $margin-m;
-  }
-  .navigation {
-    width: 400px;
-    & a {
-      color: black;
-      width: 25px;
-      & i {
-        transition: transform 0.4s;
-      }
-      & :hover {
-        transform: scale(1.4);
+    .navigation {
+      width: 650px;
+      & a {
+        color: black;
+        width: 25px;
+        & i {
+          transition: transform 0.4s;
+        }
+        & :hover {
+          transform: scale(1.4);
+        }
       }
     }
   }
@@ -27,9 +27,18 @@
     @include d-flex(center, center, column);
     .main-container {
       @include d-flex(none, center);
+      align-content: flex-start;
       flex-wrap: wrap;
-      width: auto;
-      height: auto;
+      width: 630px;
+      height: 2600px;
+      .main-personal {
+        height: 750px;
+        & img,
+        .eren,
+        .wooman {
+          width: 400px;
+        }
+      }
     }
   }
   .main-text_content {
