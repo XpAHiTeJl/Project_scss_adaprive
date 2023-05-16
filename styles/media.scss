@@ -38,6 +38,9 @@
         .wooman {
           width: 400px;
         }
+        & p {
+          font-size: 150%;
+        }
       }
     }
     .banner {
@@ -45,16 +48,24 @@
         border-radius: 15px;
       }
     }
-  }
-  .main-text_content {
-    @include d-flex(center, center);
-    .main-text {
-      width: 660px;
-      padding: $padding-xs;
+    .main-text_content {
+      width: auto;
+      @include d-flex(center, center);
+      & p {
+        font-size: 170%;
+      }
+      .main-text {
+        width: 660px;
+        padding: $padding-xs;
+      }
     }
   }
+
   .footer {
     width: 660px;
+    & p {
+      font-size: 140%;
+    }
   }
 }
 
@@ -81,7 +92,7 @@
   }
 
   .main {
-    width: 660px;
+    width: auto;
     padding: $padding-xs;
 
     @include d-flex(center, center, column);
@@ -91,18 +102,63 @@
       width: auto;
       height: auto;
     }
-  }
-  .main-text_content {
-    @include d-flex(center, center);
-    .main-text {
-      width: 660px;
-      padding: $padding-xs;
+    .banner {
+      & img {
+        border-radius: 15px;
+      }
+    }
+    .main-text_content {
+      width: auto;
+      @include d-flex(center, center);
+      .main-text {
+        width: 660px;
+        padding: $padding-xs;
+      }
     }
   }
   .footer {
-    width: 660px;
+    width: auto;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-container {
+    @include d-flex(center, center);
+    .header-logo img {
+      width: 40px;
+    }
+    .header-logo_title {
+      text-align: center;
+      width: 210px;
+      & img {
+        width: 160px;
+      }
+    }
+  }
+  .main {
+    @include d-flex(center, center);
+    flex-direction: column;
+    .main-container {
+      @include d-flex(space-around, center);
+      width: auto;
+      height: auto;
+      border: 0.5px solid;
+      border-radius: 15px;
+      margin-bottom: $margin-s;
+    }
+
+    .main-text_content {
+      width: 660px;
+      & p {
+        color: white;
+        border: 0.5px solid;
+        border-radius: 15px;
+        padding: $padding-xs;
+        margin-top: $margin-s;
+        & mark {
+          color: red;
+        }
+      }
+    }
+  }
 }

@@ -69,10 +69,10 @@ li {
         width: 157px;
       }
       .eren {
-        width: 270px;
+        width: 275px;
       }
       & p {
-        margin-top: $margin-s;
+        margin-top: $margin-l;
         color: black;
         font-weight: bold;
       }
@@ -82,7 +82,7 @@ li {
     width: 100%;
     & img {
       width: 100%;
-      height: 350px;
+      height: 400px;
     }
   }
   .main-text_content {
@@ -103,7 +103,6 @@ li {
   @include d-flex(center, center);
   text-align: center;
   & p {
-    width: 1000px;
     margin: $margin-m;
     color: rgb(4, 240, 248);
     font-weight: bold;
