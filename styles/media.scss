@@ -40,6 +40,11 @@
         }
       }
     }
+    .banner {
+      & img {
+        border-radius: 15px;
+      }
+    }
   }
   .main-text_content {
     @include d-flex(center, center);
